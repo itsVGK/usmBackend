@@ -23,7 +23,6 @@ app.all('*', function (req, res, next) {
 fs.readdirSync(modelPath).forEach(file => {
     if (~file.indexOf('.js')) {
         require(modelPath + '/' + file);
-        console.log(modelPath, file)
     }
 })
 
